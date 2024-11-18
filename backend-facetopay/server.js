@@ -13,6 +13,8 @@ const allowedOrigins = process.env.NODE_ENV === "production"
 
 app.use(cors({
   origin: (origin, callback) => {
+    console.log("Origem da requisição:", origin);
+    console.log("Origens permitidas:", allowedOrigins);
     console.log("Cheguei até aqui:");
     if (!origin || allowedOrigins.includes(origin)) {
       console.log("Passei aqui:");
