@@ -3,12 +3,11 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-// Middleware para permitir CORS
-//app.use(cors({ origin: process.env.FRONTEND_URL }));
 
+  // Adicione o esquema `https://` à origem permitida
 const allowedOrigins = process.env.NODE_ENV === "production"
-  ? [process.env.FRONTEND_URL] // Produção: Frontend no Vercel
-  : ["http://localhost:3000"]; // Desenvolvimento: Frontend local
+? [`https://${process.env.FRONTEND_URL}`] // Inclua o esquema HTTPS
+: ["http://localhost:3000"]; // Origem local para desenvolvimento
 
 
 app.use(cors({
