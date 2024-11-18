@@ -3,16 +3,38 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+// Middleware para permitir CORS
+app.use(cors({ origin: process.env.FRONTEND_URL }));
 
-app.get("/", (req, res) => {
-  res.send("API do PayBy funcionando!");
+// Middleware para interpretar o corpo das requisições JSON
+app.use(express.json()); // Adicionado aqui
+
+// Tratamento de erros globais
+app.use((err, req, res, next) => {
+  console.error("Erro inesperado:", err);
+  res.status(500).json({ message: "Erro interno do servidor" });
 });
 
-// Rotas futuras
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
 
+// Porta e inicialização do servidor
+const port = process.env.PORT || 3000;
+
+// Rotas
 const contactRoutes = require("./routes/contact");
 app.use("/api/contact", contactRoutes);
+
+
+// Servidor Rodando
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+  console.log(`TESTANDO`);
+}).on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`Erro: A porta ${port} já está em uso.`);
+  }
+});
+
+
+
+
+
