@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TopBar from "../components/TopBar";
+import NavBar from "../components/NavBar";
 
 const Home = ({ apiUrl }) => {
 
@@ -22,6 +23,7 @@ const Home = ({ apiUrl }) => {
   return (
     <div>
        <TopBar />
+       <NavBar />
       <div className="p-4">
         {/* Animação de entrada */}
         <motion.h1
