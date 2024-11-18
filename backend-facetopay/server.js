@@ -6,7 +6,7 @@ const app = express();
 
   // Adicione o esquema `https://` à origem permitida
 const allowedOrigins = process.env.NODE_ENV === "production"
-? [`https://${process.env.FRONTEND_URL}`] // Inclua o esquema HTTPS
+? [`https://${process.env.FRONTEND_URL}`, `https://www.${process.env.FRONTEND_URL}`] // Inclua o domínio com e sem "www"
 : ["http://localhost:3000"]; // Origem local para desenvolvimento
 
 
