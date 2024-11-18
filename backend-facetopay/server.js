@@ -10,10 +10,17 @@ const allowedOrigins = process.env.NODE_ENV === "production"
   ? [process.env.FRONTEND_URL] // Produção: Frontend no Vercel
   : ["http://localhost:3000"]; // Desenvolvimento: Frontend local
 
+
 app.use(cors({
-  origin: allowedOrigins,
-  methods: "GET,POST,PUT,DELETE",
-  credentials: true,
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true); // Permite a origem
+    } else {
+      callback(new Error("CORS não permitido para essa origem")); // Bloqueia a origem
+    }
+  },
+  methods: "GET,POST,PUT,DELETE", // Métodos HTTP permitidos
+  credentials: true, // Permite cookies/autenticação se necessário
 }));
 
 
