@@ -10,13 +10,13 @@ const Home = ({ apiUrl }) => {
 
 
   return (
-    <div>
-      <h1>Bem-vindo ao Home</h1>
-      <p>O sistema está pronto para receber requisições POST.</p>
-     
-      <button onClick={goToContact} className="button">
+    <div>  
+      <div className="bg-gray-100 p-4 rounded shadow-lg">
+        <h1 className="text-xl font-bold text-blue-500">Bem-vindo ao Tailwind!</h1>
+        <button onClick={goToContact} className="button">
         Ir para Contato
       </button>
+      </div>
     </div>
   );
 };
