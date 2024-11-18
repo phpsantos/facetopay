@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import TopBar from "../components/TopBar";
 
 const Home = ({ apiUrl }) => {
 
@@ -20,6 +21,7 @@ const Home = ({ apiUrl }) => {
 
   return (
     <div>
+       <TopBar />
       <div className="p-4">
         {/* Animação de entrada */}
         <motion.h1
