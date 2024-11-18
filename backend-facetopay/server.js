@@ -4,7 +4,19 @@ const cors = require("cors");
 const app = express();
 
 // Middleware para permitir CORS
-app.use(cors({ origin: process.env.FRONTEND_URL }));
+//app.use(cors({ origin: process.env.FRONTEND_URL }));
+
+const allowedOrigins = process.env.NODE_ENV === "production"
+  ? [process.env.FRONTEND_URL] // Produção: Frontend no Vercel
+  : ["http://localhost:3000"]; // Desenvolvimento: Frontend local
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true,
+}));
+
+
 
 // Middleware para interpretar o corpo das requisições JSON
 app.use(express.json()); // Adicionado aqui
