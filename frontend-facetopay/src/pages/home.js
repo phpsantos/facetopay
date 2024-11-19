@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import TopBar from "../components/TopBar";
 import NavBar from "../components/NavBar";
+import HeroSection from "../components/HeroSection";
 
 const Home = ({ apiUrl }) => {
 
@@ -22,8 +23,8 @@ const Home = ({ apiUrl }) => {
 
   return (
     <div>
-       <TopBar />
-       <NavBar />
+      <TopBar />
+      <NavBar />
       <div className="p-4">
         {/* Animação de entrada */}
         <motion.h1
@@ -32,7 +33,10 @@ const Home = ({ apiUrl }) => {
           transition={{ duration: 1 }}    // Duração da transição
           className="text-3xl font-bold text-blue-500"
         >
-          Bem-vindo ao Facetopay!
+          <div>
+            <HeroSection />
+            {/* Outras seções */}
+          </div>
         </motion.h1>
 
         {/* Animação com loop */}
@@ -50,6 +54,7 @@ const Home = ({ apiUrl }) => {
           Ir para Contato
         </button>
       </div>
+
       <div>
         <section data-aos="fade-up" className="p-4 bg-blue-500 text-white">
           Este conteúdo aparecerá com animação de subida.

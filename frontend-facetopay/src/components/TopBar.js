@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { PhoneIcon } from "@heroicons/react/24/outline";
 
 const TopBar = () => {
 
