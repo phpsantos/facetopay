@@ -38,6 +38,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: "Erro interno do servidor" });
 });
 
+app.use((req, res, next) => {
+  console.error("Página não encontrada:", err);
+  res.status(404).json({ message: "Página não encontrada" });
+});
+
 
 // Porta e inicialização do servidor
 const port = process.env.PORT || 3000;

@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import TopBar from "../components/TopBar";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
+import AboutSection from "../components/AboutSection";
 
 const Home = ({ apiUrl }) => {
 
@@ -37,7 +38,14 @@ const Home = ({ apiUrl }) => {
             <HeroSection />
             {/* Outras seções */}
           </div>
+
+          <div>
+            {/* Outras seções */}
+            <AboutSection />
+          </div>
         </motion.h1>
+
+
 
         {/* Animação com loop */}
         <motion.button
