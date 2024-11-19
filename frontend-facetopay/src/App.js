@@ -4,9 +4,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 
-import Home from "./pages/Home";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 
 // Use a variável de ambiente REACT_APP_API_URL
 const API_URL = process.env.REACT_APP_API_URL;

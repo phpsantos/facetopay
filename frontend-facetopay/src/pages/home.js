@@ -67,7 +67,7 @@ const Home = ({ apiUrl }) => {
         Este é um exemplo de fade-in.
       </div>
       <div data-aos="zoom-in" className="bg-blue-500 p-6 text-white rounded shadow-md">
-        Este é um exemplo de zoom-in.
+        Este é um exemplo de zoom-in. - teste
       </div>
     </div>
 
