@@ -9,7 +9,7 @@ const HeroSection = () => {
                 {/* Texto da Esquerda */}
                 <div className="flex-1 text-center md:text-left mb-8 md:mb-0">
                     <h1 className="text-4xl font-bold text-gray-800 mb-4">
-                        Turbine o seu faturamento <br /> e aumente sua rotatividade.
+                        Turbine o seu faturamento <br /> e aumente sua rotatividade. - teste
                     </h1>
                     <p className="text-lg text-gray-600 mb-4">
                         Integre teste soluções modernas de pagamento para transformar o potencial do seu negócio.
