@@ -7,6 +7,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ServerError from "./pages/ServerError";
+import posthog from 'posthog-js'
+
+
 
 // Use a variável de ambiente REACT_APP_API_URL
 const API_URL = process.env.REACT_APP_API_URL;
@@ -17,6 +20,13 @@ function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  posthog.init('phc_svtTJYiuvw61GTtAQMAmOFZKNjhb0D1jV4XqvlzI2zV',
+    {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+    }
+)
 
   return (
     <Router>
