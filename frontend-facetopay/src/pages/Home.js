@@ -12,8 +12,6 @@ import posthog from 'posthog-js'
 
 import { useState } from 'react'
 
-
-
 const Home = () => {
 
     posthog.capture('my event', { property: 'value' })
@@ -34,12 +32,9 @@ const Home = () => {
     ]
 
     return (
-        <div>
-            <div>
-                <TopBarLandingPage />
-            </div>
-            <div>
-
+        <div className="min-h-screen">
+            <TopBarLandingPage />
+            <div className="mt-[56px]">
                 <HeaderHeroPage
                     navigation={navigation}
                     mobileMenuOpen={mobileMenuOpen}
@@ -54,4 +49,6 @@ const Home = () => {
     );
 };
 
+
 export default Home;
+

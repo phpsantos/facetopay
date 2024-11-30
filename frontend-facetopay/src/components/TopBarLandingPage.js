@@ -2,8 +2,8 @@ import { XMarkIcon } from '@heroicons/react/20/solid'
 
 export default function TopBarLandingPage() {
   return (
-    <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
-      <div
+<div style={{border: '2px solid'}} className="relative isolate border 1px solid flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1 h-[56px]">
+<div
         aria-hidden="true"
         className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
       >
@@ -36,7 +36,7 @@ export default function TopBarLandingPage() {
           Join us in Denver from June 7 – 9 to see what’s coming next.
         </p>
         <a
-          href="#"
+          href="/redicionar"
           className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
         >
           Register now <span aria-hidden="true">&rarr;</span>
