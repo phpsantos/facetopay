@@ -2,7 +2,7 @@ import { XMarkIcon } from '@heroicons/react/20/solid'
 
 export default function TopBarLandingPage() {
   return (
-<div style={{border: '2px solid'}} className="relative isolate border 1px solid flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1 h-[56px]">
+<div style={{border: '3px solid'}} className="relative isolate border 1px solid flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1 h-[56px]">
 <div
         aria-hidden="true"
         className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
